@@ -1,0 +1,413 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #48ff61;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    background-image: url('./src/lala.svg');
+    background-attachment:fixed;
+
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    background-color: transparent;
+    border: 1.5px solid #ffffff;
+    border-radius: 20px;
+    padding: 2px 2px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+    height: fit-content;
+}
+nav ul li:hover {
+    background-color: #ff5a00;
+    color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+.logo{
+    font-weight: bold;
+    color: #ffffff;
+    display:block;
+}
+.whatsapp-button {
+    display: inline-block;
+    background-color: transparent;
+    border: 1.5px solid #ffffff;
+    border-radius: 20px;
+    padding: 2px 2px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+    height: fit-content;
+}
+.Bouton-whatsapp svg {
+    width: 20px;
+    height: auto;
+    display: inline-block;
+}
+.Bouton-whatsapp{
+    position: relative;
+    top: 0px;
+}
+.Bouton-map {
+   
+    margin: 10px;
+    
+}
+
+  
+.whatsapp-button:hover {
+    background-color: #25d366;
+    color: #ffffff;
+}
+.hero{
+    display: flex;
+    justify-content:space-around;
+}
+
+.image13{
+    width: 80%;
+    height: auto;
+  display: block;
+} 
+
+#search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 2px 2px;
+}
+
+#search-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 100%;
+}
+.top-menu{
+    position: relative;
+    right: 0px;
+    width: 100%;
+    background-color: #48ff61;
+    top: 20px;
+}
+
+#search-button {
+    background-color: #ff5a00;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 70px;
+}
+#search-button svg{
+    width: 20px;
+    height: auto;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.titre{
+    display: grid;
+    justify-content: space-around;
+    align-items:start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.recherch{
+    display: block;
+    padding-top: 80px;
+}
+
+.card {
+    flex: 0 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    margin: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #eaeaea;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #ff5a00;
+    color: #fff;
+}
+.button {
+    background-color:#ff5a00;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    border-radius: 40px;
+  }
+  .card:hover .button {
+    transform: scale(1.05);
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3, .card p {
+    padding: 15px;
+    margin: 0;
+}
+.icon {
+   
+  display: flex;
+  padding: 20px;
+  align-items: center;
+   
+}
+.icon svg{
+    width: 36px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 0px 2px;
+}
+  
+.user{
+    background-color: #ffffff;
+	margin:0 auto;
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+	bottom: 50px;
+	overflow: hidden;
+    display: flex;
+	z-index: 5;
+    margin-top: 10px;
+    align-items: center;
+}
+.phon{
+    width: 30px;
+    margin-right: 5px;
+}
+.user p {
+	font-size: 1.3em;
+	color: #000000;
+	margin-top: -20px;
+}
+.slider{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.slider-container {
+    overflow: hidden;
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px 0;
+    display: flex;
+  }
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .card1 {
+    width: 300px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #eaeaea;
+  }
+  .card1 img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 5px;
+  }
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .card-text {
+    color: #555;
+  }
+  .our-service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 10%;
+  }
+      /* Add styles for navigation buttons */
+      .slider-navigation {
+        display: flex;
+        gap: 10px;
+      }
+      .slider-navigation button {
+        cursor: pointer;
+        padding: 5px 5px;
+        background-color:#ff5a00;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+      }
+      .slide-left {
+        left: 20px;
+      }
+      .slide-right {
+        right: 20px;
+      }
+.carousel-cell {
+    padding: 2rem 0 1rem 0;
+  }
+  
+  .flickity-viewport {
+    overflow: visible;
+  }
+  
+  .products-feature {
+    transition: 0.3s ease all;
+    margin-left: 2rem;
+    overflow: hidden;
+  }
+  .levelup{
+    display: flex;
+  }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-toggle {
+        display: flex;
+        margin: 10px;
+        font-size: 18px;
+        justify-content: left;
+    }
+    .hide{
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex: 1 1 auto;
+        width: 80%;
+    }
+    .image13{
+        width: 0px;
+      margin-left: 0px;
+      display: none;
+    } 
+    .logo{
+        display: none;
+    }
+    .top-men{
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        right: 0px;
+        width: 100%;
+        background-color: #48ff61;
+        top: 0;
+    }
+    .top-menu{
+        position: fixed;
+        right: 0px;
+        width: 100%;
+        background-color: #48ff61;
+        top: 0;
+    }
+    .Bouton-whatsapp{
+        position: relative;
+        top: -40px;
+    }
+    .recherch{
+        padding-top: 20px;
+    }
+}
+

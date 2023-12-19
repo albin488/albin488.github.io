@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Card Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      width: 80%;
+      max-width: 1200px;
+      margin: 20px 0;
+    }
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+    }
+    .slider-wrapper::-webkit-scrollbar {
+      width: 8px;
+    }
+    .slider-wrapper::-webkit-scrollbar-thumb {
+      background-color: #888;
+    }
+    .card {
+      width: 300px;
+      margin-right: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      color: #555;
+    }
+    .slider-controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .slider-controls button {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-container">
+    <div class="slider-controls">
+      <button onclick="prevSlide()">Prev</button>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+    <div class="slider-wrapper" id="cardSlider" onscroll="scrollHandler(event)">
+      <div class="card">
+        <img src="https://placekitten.com/300/150" alt="Card Image 1">
+        <div class="card-body">
+          <h2 class="card-title">Card 1</h2>
+          <p class="card-text">Some example text.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/301/150" alt="Card Image 2">
+        <div class="card-body">
+          <h2 class="card-title">Card 2</h2>
+          <p class="card-text">Some example text.</p>
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+      <div class="card">
+        <img src="https://placekitten.com/300/150" alt="Card Image 1">
+        <div class="card-body">
+          <h2 class="card-title">Card 1</h2>
+          <p class="card-text">Some example text.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/301/150" alt="Card Image 2">
+        <div class="card-body">
+          <h2 class="card-title">Card 2</h2>
+          <p class="card-text">Some example text.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300/150" alt="Card Image 1">
+        <div class="card-body">
+          <h2 class="card-title">Card 1</h2>
+          <p class="card-text">Some example text.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/301/150" alt="Card Image 2">
+        <div class="card-body">
+          <h2 class="card-title">Card 2</h2>
+          <p class="card-text">Some example text.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById('cardSlider');
+    let currentIndex = 0;
+
+    function showCard(index) {
+      const cardWidth = document.querySelector('.card').offsetWidth + 20;
+      const newPosition = -index * cardWidth;
+      slider.style.transform = `translateX(${newPosition}px)`;
+    }
+
+    function cloneAndAppend() {
+      const firstCard = document.querySelector('.card');
+      const clone = firstCard.cloneNode(true);
+      document.querySelector('.slider-wrapper').appendChild(clone);
+    }
+
+    cloneAndAppend();
+
+    function autoSlide() {
+      currentIndex++;
+      const cardCount = document.querySelectorAll('.card').length;
+      if (currentIndex >= cardCount - 3) {
+        currentIndex = 0;
+        slider.style.transition = 'none';
+        slider.style.transform = 'translateX(0)';
+        setTimeout(() => {
+          slider.style.transition = '';
+        }, 0);
+      }
+      showCard(currentIndex);
+    }
+
+    setInterval(autoSlide, 3000);
+
+    function nextSlide() {
+      currentIndex++;
+      const cardCount = document.querySelectorAll('.card').length;
+      if (currentIndex >= cardCount - 3) {
+        currentIndex = 0;
+      }
+      showCard(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex--;
+      if (currentIndex < 0) {
+        const cardCount = document.querySelectorAll('.card').length;
+        currentIndex = cardCount - 4;
+      }
+      showCard(currentIndex);
+    }
+
+    function scrollHandler(event) {
+      // Determine scroll direction
+      const delta = Math.max(-1, Math.min(1, (event.deltaY || -event.detail)));
+      
+      // Scroll right
+      if (delta > 0) {
+        nextSlide();
+      }
+      // Scroll left
+      else {
+        prevSlide();
+      }
+
+      // Prevent default scroll behavior
+      event.preventDefault();
+    }
+    function touchMoveHandler(event) {
+      touchEndX = event.touches[0].clientX;
+    }
+
+    function touchEndHandler() {
+      const touchDelta = touchEndX - touchStartX;
+      if (Math.abs(touchDelta) > 50) {
+        if (touchDelta > 0) {
+          prevSlide();
+        } else {
+          nextSlide();
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
