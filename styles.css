@@ -281,6 +281,9 @@ section {
     height: 75%;
     object-fit: cover;
   }
+  .nare svg{
+    padding: 10px;
+  }
   .card-body {
     padding: 5px;
   }
