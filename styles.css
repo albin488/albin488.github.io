@@ -329,6 +329,26 @@ section {
   }
   .levelup{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 10%;
+  }
+  .levelup img{
+    max-width: 500px;
+    width: 50%;
+    height: auto;
+  }
+  .leveup-text{
+    width: 40%;
+    max-width: 300px;
+    font-size: 2vw;
+  }
+  .contactus-btn{
+    height: 50px;
+    background-color: #ff5a00;
+    border-radius: 40px;
+    font-size: 1.5rem;
   }
 
 footer {
