@@ -8,7 +8,6 @@ body {
 header {
     background-color: #48ff61;
     color: #fff;
-    padding: 15px;
     text-align: center;
     background-image: url('./src/lala.svg');
     background-attachment:fixed;
