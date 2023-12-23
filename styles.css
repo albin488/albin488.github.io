@@ -430,6 +430,7 @@ section {
     flex-wrap: nowrap;
     align-items: center;
     margin-bottom: 20px;
+    text-align: left;
   }
   .roundicon{
     border-radius: 20px;
@@ -698,6 +699,75 @@ background-color: #fff;
 }
 .nobleicon svg{
   width: 40px;
+}
+.headercontact{
+  padding: 40px 0px 0px 0px;
+}
+.herocontac{
+  background-color: #000000;
+  width: 100%;
+  display: block;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('./src/backgroun.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+margin-top: 10px;
+}
+.contattitre{
+  color:#ff5a00; 
+}
+.othercontact{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+.othercontact h2{
+  text-align: center;
+}
+.infother{
+  flex: 0 1 210px;
+  max-width: 210px;
+  min-width: 180px;
+  height: 350px;
+  background-color: rgba(255, 90, 0, 0.5);
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  
+}
+.greenback{
+  background-color: rgba(72, 255, 97, 0.5);
+}
+.nar-text{
+  width: 80%;
+  padding:0% 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.serviceline{
+  display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+.servicecontent{
+  flex: 0 1 310px;
+  display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:flex-start;
+    text-align: left;
+}
+.servicelogo{
+  width: 64px;
+  min-width: 60px;
+  height: auto;
+}
+.servicetexte{
+  text-align: left;
 }
 
 footer {
