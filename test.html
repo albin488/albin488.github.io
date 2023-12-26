@@ -9,60 +9,54 @@
       font-family: Arial, sans-serif;
     }
 
-    .image-grid {
-      gap: 16px;
-      padding: 16px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); 
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
 
-    .image-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
+    .footer-menu {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
     }
 
-    .image-item img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .footer-menu li {
+      margin: 0 15px;
+    }
+
+    .footer-menu a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .footer-menu {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-menu li {
+        margin: 10px 0;
+      }
     }
   </style>
-  <title>Responsive Image Grid</title>
 </head>
 <body>
 
-  <div class="image-grid">
-    <!-- Image 1 -->
-    <div class="image-item">
-      <img src="https://picsum.photos/id/1015/250/250">
-    </div>
+  <!-- Your website content goes here -->
 
-    <!-- Image 2 -->
-    <div class="image-item">
-      <img src="https://picsum.photos/id/1015/250/250">
-    </div>
-
-    <!-- Image 3 -->
-    <div class="image-item">
-      <img src="https://picsum.photos/id/1015/250/250">
-    </div>
-
-    <!-- Image 4 -->
-    <div class="image-item">
-      <img src="https://picsum.photos/id/1015/250/250">
-    </div>
-
-    <!-- Image 5 -->
-    <div class="image-item">
-      <img src="https://picsum.photos/id/1015/250/250">
-    </div>
-
-    <!-- Image 6 -->
-    <div class="image-item">
-      <img src="https://picsum.photos/id/1015/250/250">
-    </div>
-  </div>
+  <footer>
+    <ul class="footer-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p>&copy; 2023 Your Company</p>
+  </footer>
 
 </body>
 </html>

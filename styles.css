@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #48ff61;
-    color: #fff;
+    color: #000000;
     text-align: center;
     background-image: url('./src/lala.svg');
     background-attachment:fixed;
@@ -35,28 +35,30 @@ nav ul {
 }
 section h1{
     font-size: 3vw;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
     display: inline;
     margin-right: 20px;
     background-color: transparent;
-    border: 1.5px solid #ffffff;
+    border: 1.5px solid #000000;
     border-radius: 20px;
     padding: 2px 2px;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     transition: background-color 0.3s, color 0.3s;
     height: fit-content;
 }
 nav ul li:hover {
     background-color: #ff5a00;
-    color: #ffffff;
+    color: #000000;
 }
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-size: 16px;
 }
 .logo{
@@ -67,11 +69,11 @@ nav a {
 .whatsapp-button {
     display: inline-block;
     background-color: transparent;
-    border: 1.5px solid #ffffff;
+    border: 1.5px solid #000000;
     border-radius: 20px;
     padding: 2px 2px;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     transition: background-color 0.3s, color 0.3s;
     height: fit-content;
 }
@@ -151,6 +153,10 @@ nav a {
 
 section {
     text-align: center;
+    margin: 40px 0;
+}
+.nre-titre{
+color:#fff;
 }
 .cards-section {
     display: flex;
@@ -372,6 +378,7 @@ section {
  #house{
     width: 100%;
     background-color: #48ff61;
+    margin-bottom: 0;
  }
  .levelup-btn{
     display: inline;
@@ -594,7 +601,10 @@ section {
       float: left;
       clear: both;
     }
-  
+    .menuf{
+      flex-direction: column;
+        text-align: center;
+    }
     li, p {
       width: 100%;
     }
@@ -612,24 +622,25 @@ section {
     }
   }
 .ourserv{
- width: 100%;
  height:auto;
  display:inline-flex;
  background-color:#48ff61 ;
  align-items: center;
  align-content: center;
  padding: 20px;
+ justify-content: center;
 
 }
 .ouservimage{
   height: 100%;
-  width: 30%;
+  width: 25%;
   background-image: url('./src/Untitled-1.png');
   background-repeat: no-repeat;
   background-position: 0%;
   background-size: cover;
   border-radius: 5px;
   color: #fff;
+  margin-right: 20px;
   padding: 20px;
 }
 
@@ -638,7 +649,7 @@ section {
 }
 .image-grid {
 display: inline-flex; 
-margin: 0px 10px 10px 0px;
+margin: 0px 0px 10px 0px;
 }
 
 .image-item {
@@ -651,7 +662,7 @@ background-color: #fff;
  
 }
 
-.image-item svg {
+.image-item img {
   width: 100%;
   height: auto;
   display: block;
@@ -667,6 +678,9 @@ background-color: #fff;
 .nahreft{
   width: 40%;
   padding: 0%;
+}
+.nahreft h1{
+  font-size: 6vw;
 }
 .nahright{
   width: 40%; 
@@ -785,21 +799,25 @@ footer {
 .footer-content{
   display: flex;
   align-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 .menuf{
-  display: flex;
-  align-items:flex-end;
-  color: #fff;
-  padding: 0% 15% 0% 15%;
+  list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
 }
 .menuf a{
   color:#fff;
+  text-decoration: none;
+  margin: 10px
 }
 .gost{
   display: flex;
     align-items: center;
-  height: 10px;
-  width: 10px;
+  color: #000;
 }
 .line{
   height: 2px;
@@ -827,6 +845,7 @@ footer {
         flex-direction: column;
         align-content: flex-start;
     }
+   
 
     nav ul.show {
         display: flex;
@@ -891,13 +910,11 @@ footer {
         position: relative;
         top: -40px;
     }
-    .recherch{
-        padding-top: 20px;
-    }
     .text-div p{
         font-size: 3vw;
        }
        section h1{
         font-size: 5vw;
+       
     }
 }
